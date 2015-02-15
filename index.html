@@ -1,0 +1,36 @@
+<html ng-app="MyApp">
+<head>
+	<title>Angular Calendar</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="bower_components/fullcalendar/fullcalendar.css"/>
+	<link rel="stylesheet" href="app.css">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+	<script type="text/javascript" src="bower_components/angular-dragdrop/src/angular-dragdrop.js"></script>
+	<script type="text/javascript" src="bower_components/fullcalendar/fullcalendar.js"></script>
+	<script type="text/javascript" src="bower_components/fullcalendar/gcal.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="MyController">
+        <div id='external-events'>            
+			<h4>Draggable Events</h4>
+			<div data-drag="true" 
+					data-jqyoui-options="{revert: 'invalid'}"
+					class='external-event'
+					jqyoui-draggable="{animate:true, onStart:'onStart'}">My Event 1</div>
+        </div>
+
+	<div>
+		<div id="calendar" 
+				data-drop="true"
+				jqyoui-droppable="{beforeDrop:'beforeDrop'}"
+				ui-calendar="uiConfig.calendar" 
+				class="span8 calendar" 
+				ng-model="eventSources"> 
+	</div>
+</body>
+</html>
