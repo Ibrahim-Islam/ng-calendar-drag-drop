@@ -1,0 +1,23 @@
+{
+  "name": "ng-calendar",
+  "version": "0.0.0",
+  "authors": [
+    "Ibrahim-Islam <ibrahim.islam@live.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular-ui-calendar": "latest",
+    "bootstrap" : "latest",
+    "angular-bootstrap": "latest",
+    "angular-dragdrop": "latest"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
